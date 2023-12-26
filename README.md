@@ -320,3 +320,12 @@ If you’re uncertain and/or want to be certain about user plex and its data (ho
 sudo userdel plex
 sudo rm -rf /var/lib/plexmediaserver
 ```
+## Update
+
+### DEB-based distros (Ubuntu, etc.)
+```shell
+echo deb https://downloads.plex.tv/repo/deb public main | sudo tee /etc/apt/sources.list.d/plexmediaserver.list
+curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+sudo apt update -y
+sudo apt full-upgrade
+```
